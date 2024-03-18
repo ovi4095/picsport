@@ -27,7 +27,7 @@ const Header = () => {
               <DropdownToggle nav caret>
                 Category
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu end>
                 <DropdownItem>Animal</DropdownItem>
                 <DropdownItem>Anime</DropdownItem>
                 <DropdownItem>Background</DropdownItem>

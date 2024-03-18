@@ -8,5 +8,8 @@
     margin: .8rem;
     opacity: 1;
     cursor: pointer;
-    transition: all .2s;
+    transition: all .3s;
+}
+.CategoryDisplay {
+    display: flex;
 }
