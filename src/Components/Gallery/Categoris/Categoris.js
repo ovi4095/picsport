@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import './Categoris.css'
 
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap'
-const Categoris = ({category, selectedCategoryHandler}) => {
-  return (
+const Categoris = ({category}) => {
+    const link = (category.categoryName);
+    return (
     <div className='catagoryDiv'>
-        <Link to='/category'  style={{textDecoration: 'none',display:'inline-block', margin:'0px'}} onClick={() => selectedCategoryHandler(category.id)}>
+        <Link to={'/category-'+link}  style={{textDecoration: 'none',display:'inline-block', margin:'0px'}}>
         <div className='CategotyCard'>
             <Card inverse
                 style={{

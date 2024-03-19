@@ -28,7 +28,7 @@ const Header = () => {
                 Category
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Animal</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category-Animal' >Animal</Link></DropdownItem>
                 <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Anime</Link></DropdownItem>
                 <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Background</Link></DropdownItem>
                 <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >People</Link></DropdownItem>

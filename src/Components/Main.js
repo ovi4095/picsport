@@ -11,6 +11,7 @@ import CATEGORIES from '../data/categoris'
 import CATEGORYGALLERY from '../data/catagoryGallery'
 import IMAGES from '../data/categoryImage'
 import './Gallery/Gallery.css'
+import Animal from './Gallery/Categoris/Category/Animale'
 // import Categoris from './Gallery/Categoris/Categoris'
 
 export class Main extends Component {
@@ -18,40 +19,33 @@ export class Main extends Component {
     categories:CATEGORIES,
     categoryGallery:CATEGORYGALLERY,
     images: IMAGES,
-    selectCategory: null,
-    selectImages: null,
   }
 
-  selectedCategoryHandler = (categoryid) => {
-      const categoryselector = this.state.categoryGallery.filter((category) => category.id === categoryid);
-      const category = categoryselector[0];
-      const imageselector = (this.state.images.filter((images) => images.categoryId === categoryid));
-      const images= imageselector;
-      console.log(category, images)
-      this.setState({
-        selectCategory: category,
-        selectImages: images,
-      })
-  }
   render() {
-    // const categories = this.state.categories.map((category) => {s
-    //          return (<Categoris category={category} key={category.id} selectedCategoryHandler={this.selectedCategoryHandler}/>)
-    //     });
     const gallery = this.state.categories.map((category) => {
-             return (<Gallery category={category} key={category.id} selectedCategoryHandler={this.selectedCategoryHandler}/>)
+             return (<Gallery category={category} key={category.id}/>)
         });
     const category = <Category category={this.state.selectCategory} images={this.state.selectImages}/>
+
+    const animal = this.state.categoryGallery.map((animal)=>{
+            if(animal.categoryName === 'Animal'){
+              let animals = animal;
+              let images = this.state.images.filter((image) => image.categoryId === 1)
+              return <Animal category={animals} images={images} key={animals.id}/>
+            }
+    })
+    
     return (
         <div>
             <Header/>
-                  <div className='container Gallery'>
+                  <div className='container Main'>
                   <Routes>
                       <Route path='/' element={<Navigate to='/home' replace={true}/>}/>
                       <Route path='/home' element={<Home/>}/>
                       <Route path='/about' element={<About/>}/>
                       <Route path='/gallery' element={gallery}/>
-                      {/* <Route path='/gallery' element={categories}/> */}
                       <Route path='/category' element={category}/>
+                      <Route path='/category-Animal' element={animal}/>
                       <Route path='/login' element={<Auth/>}/>
                   </Routes>             
                   </div>
