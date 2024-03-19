@@ -1,15 +1,16 @@
 .CategotyCard {
-    width: 23rem;
-    margin: 1rem;
+    width: 21rem;
+    margin: .5rem;
     opacity: 0.85;
 }
 .CategotyCard:hover {
-    width: 23.5rem;
-    margin: .8rem;
+    width: 20.5rem;
+    margin: .5rem;
     opacity: 1;
     cursor: pointer;
     transition: all .3s;
 }
-.CategoryDisplay {
-    display: flex;
+.catagoryDiv{
+    width: 350px;
+    margin: 0px;
 }

@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Gallery from './Gallery'
 
-export class GalleryHolder extends Component {
-  render() {
+const  GalleryHolder = (props) => {
+  console.log(props);
+  const gallery = <Gallery category={props.category} key={props.category.id} selectedCategoryHandler={props.selectedCategoryHandler}/>;
     return (
-      <div>GalleryHolder</div>
+      <div>
+        {gallery}
+      </div>
     )
-  }
 }
 
 export default GalleryHolder

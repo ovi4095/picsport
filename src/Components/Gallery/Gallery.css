@@ -1,12 +1,6 @@
 .Gallery {
-    margin-top: 3rem;
-    margin-bottom: 25rem;
-
-}
-.Gallery-grid {
-    display: grid;
-}
-.grid--x3 {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: inline-block;
     
+    margin: 1rem;
+
 }

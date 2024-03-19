@@ -5,9 +5,8 @@ import './Categoris.css'
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap'
 const Categoris = ({category, selectedCategoryHandler}) => {
   return (
-    <div className='container CategoryDisplay'>
-    <div>
-        <Link to='/category'  style={{textDecoration: 'none'}} onClick={() => selectedCategoryHandler(category.id)}>
+    <div className='catagoryDiv'>
+        <Link to='/category'  style={{textDecoration: 'none',display:'inline-block', margin:'0px'}} onClick={() => selectedCategoryHandler(category.id)}>
         <div className='CategotyCard'>
             <Card inverse
                 style={{
@@ -28,7 +27,7 @@ const Categoris = ({category, selectedCategoryHandler}) => {
                     background:'rgba(0, 0, 0, 0.435)',
                     
                     paddingLeft: '1rem',
-                    fontSize:'2.5rem',
+                    fontSize:'1.2rem',
                     textAlign:'left',
                     marginTop: '5rem',
                     color:"#ffffff",
@@ -42,7 +41,6 @@ const Categoris = ({category, selectedCategoryHandler}) => {
             </Card>
         </div>
         </Link>
-    </div>
     </div>
   )
 }

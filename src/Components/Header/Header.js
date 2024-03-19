@@ -28,12 +28,12 @@ const Header = () => {
                 Category
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem>Animal</DropdownItem>
-                <DropdownItem>Anime</DropdownItem>
-                <DropdownItem>Background</DropdownItem>
-                <DropdownItem>People</DropdownItem>
-                <DropdownItem>Land Scape</DropdownItem>
-                <DropdownItem>Space</DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Animal</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Anime</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Background</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >People</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Land Scape</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Space</Link></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             </NavItem>
