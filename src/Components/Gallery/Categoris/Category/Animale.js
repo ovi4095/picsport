@@ -1,34 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Category.css'
-import Error from '../../../../assets/images/error/error.png'
-const Animal = ({category, images}) => {
-    console.log(images)
-  return (category!==null?(
+import ImageDetail from './ImageDetail/ImageDetail';
+import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap';
+const Animal = ({comments, images, category}) => {
 
-    <div>
-        <h2 className='CategoryTitle'>{category.categoryName}</h2>
-        <div className=' Category--grid grid--x3'>
-            {
-               images.map((images)=>{
-                  return <img className='CategoryImgs' src={images.image} alt="Gallery Image" />;
-               })
-            }
-        </div>
-    </div>
-  ):(<div style={{height:"80vh", 
-                  display:'flex',
-                  flexDirection:'column', 
-                  justifyContent:'center', 
-                  alignItems:'center'}}>
-        <h3 
-          style={{color:"#806DBF"}}
-        >Sorry! Pleace, Go Back to Galley</h3>
-        <img 
-          style={{
-            width:'350px'
-          }} src={Error} alt="Error 404" />
-        </div>)
-  )
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [comment] = useState(comments);
+    const [toggleModal, setToggleModal] = useState(false);
+   
+    const onSelectImage = (image) => {
+        setSelectedImage(image);
+        setToggleModal(!toggleModal);
+    }
+    const toggleModalHandler = () =>{
+        setToggleModal(!toggleModal);
+    }
+    const imageDetail = selectedImage ? <ImageDetail image={selectedImage} comment={comment}/> : null;
+    return (
+            <div>
+                <h2 className='CategoryTitle'>{category.categoryName}</h2>
+                <div className=' Category--grid grid--x3'>
+                    {
+                    images.map((images)=>{
+                        return <img className='CategoryImgs' src={images.image} alt="Gallery Image" onClick={()=>onSelectImage(images)}/>;
+                    })
+                    }
+                </div>
+                <Modal isOpen={toggleModal}>
+                    <ModalBody>
+                    {imageDetail}
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color='primary' onClick={toggleModalHandler}>Close</Button>
+                    </ModalFooter>
+                </Modal>
+            </div>
+            )
 }
 
 export default Animal

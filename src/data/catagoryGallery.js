@@ -13,7 +13,7 @@ const CATEGORYGALLERY = [
     },
     {
         id:4,
-        categoryName: 'Land Scape',
+        categoryName: 'Land-Scape',
     },
     {
         id:5,

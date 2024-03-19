@@ -29,11 +29,11 @@ const Header = () => {
               </DropdownToggle>
               <DropdownMenu end>
                 <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category-Animal' >Animal</Link></DropdownItem>
-                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Anime</Link></DropdownItem>
-                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Background</Link></DropdownItem>
-                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >People</Link></DropdownItem>
-                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Land Scape</Link></DropdownItem>
-                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category' >Space</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category-Anime' >Anime</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category-Background' >Background</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category-Land-Scape' >People</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category-People' >Land Scape</Link></DropdownItem>
+                <DropdownItem><Link style={{color:'#806DBF'}} className='nav-link' to='/category-Space' >Space</Link></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             </NavItem>

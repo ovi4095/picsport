@@ -14,3 +14,23 @@
     width: 350px;
     margin: 0px;
 }
+.h2C{
+    margin-top: 1rem;
+}
+
+
+@media screen and (min-width: 765px) {
+
+    .CategotyCard {
+        width: 30rem;
+       
+    }
+
+    .CategotyCard:hover {
+        width: 29.5rem;
+    }
+    .h2C{
+        margin-top: 1rem;
+    }
+   
+} 

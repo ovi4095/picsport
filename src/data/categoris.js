@@ -16,7 +16,7 @@ const CATEGORIES = [
     },
     {
         id:4,
-        categoryName: 'Land Scape',
+        categoryName: 'Land-Scape',
         image: 'assets/images/category/categoryimages/landscape.png',
     },
     {

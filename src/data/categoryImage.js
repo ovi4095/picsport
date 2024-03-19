@@ -57,7 +57,7 @@ const IMAGES = [
       {
         id:'Al12',
         categoryId:1,   
-        image:'assets/images/category/animal/animal2.png',
+        image:'assets/images/category/animal/animal12.png',
       },
       {
         id:'An1',

@@ -30,13 +30,13 @@ const Categoris = ({category}) => {
                     paddingLeft: '1rem',
                     fontSize:'1.2rem',
                     textAlign:'left',
-                    marginTop: '5rem',
+                    marginTop: '3.5rem',
                     color:"#ffffff",
                     width: '100%',
                     borderRadius: '12.5px'
                 }} 
                 >
-                    {category.categoryName}
+                    <h2 className='h2C'>{category.categoryName}</h2>
                 </CardTitle>
                 </CardImgOverlay>
             </Card>
