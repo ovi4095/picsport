@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import './Category.css'
 import ImageDetail from './ImageDetail/ImageDetail';
-import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import CrossBlack from '../../../../assets/comment/crossBlack.png'
+import CrossRed from '../../../../assets/comment/crossRed.png'
+
 const Background = ({comments, images, category}) => {
 
     const [selectedImage, setSelectedImage] = useState(null);
     const [comment] = useState(comments);
     const [toggleModal, setToggleModal] = useState(false);
+    const [toggleHover, setToggleHover] = useState(false);
    
     const onSelectImage = (image) => {
         setSelectedImage(image);
@@ -15,6 +19,12 @@ const Background = ({comments, images, category}) => {
     const toggleModalHandler = () =>{
         setToggleModal(!toggleModal);
     }
+    const toggleHoverHandler = () =>{
+        setToggleHover(!toggleHover);
+    }
+
+    const close = toggleHover === false? CrossBlack:CrossRed;
+
     const imageDetail = selectedImage ? <ImageDetail image={selectedImage} comment={comment}/> : null;
     return (
             <div>
@@ -26,12 +36,19 @@ const Background = ({comments, images, category}) => {
                     })
                     }
                 </div>
-                <Modal isOpen={toggleModal}>
+                <Modal isOpen={toggleModal} fullscreen>
+                    <ModalHeader style={{display:'flex', justifyContent:'end', height:'50px'}}>
+                        <img 
+                            style={{width:"15px", transition:'all 0.2s'}}  
+                            src={close} alt="X"
+                            onMouseEnter={toggleHoverHandler}
+                            onMouseLeave={toggleHoverHandler}  
+                            onClick={toggleModalHandler} />    
+                    </ModalHeader>
                     <ModalBody>
                     {imageDetail}
                     </ModalBody>
-                    <ModalFooter>
-                        <Button color='primary' onClick={toggleModalHandler}>Close</Button>
+                    <ModalFooter style={{height:'50px'}}>
                     </ModalFooter>
                 </Modal>
             </div>

@@ -17,7 +17,10 @@
 .h2C{
     margin-top: 1rem;
 }
-
+.ModalCross{
+    background-image: url('../../../../public/assets/comment/crossBlack.png');
+    height: 20;
+}
 
 @media screen and (min-width: 765px) {
 
