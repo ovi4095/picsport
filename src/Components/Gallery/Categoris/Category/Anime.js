@@ -6,7 +6,7 @@ import CrossBlack from '../../../../assets/comment/crossBlack.png'
 import CrossRed from '../../../../assets/comment/crossRed.png'
 
 const Anime = ({comments, images, category}) => {
-
+    console.log(comments);
     const [selectedImage, setSelectedImage] = useState(null);
     const [comment] = useState(comments);
     const [toggleModal, setToggleModal] = useState(false);
@@ -22,7 +22,6 @@ const Anime = ({comments, images, category}) => {
     const toggleHoverHandler = () =>{
         setToggleHover(!toggleHover);
     }
-
     const close = toggleHover === false? CrossBlack:CrossRed;
     const imageDetail = selectedImage ? <ImageDetail image={selectedImage} comment={comment}/> : null;
     return (

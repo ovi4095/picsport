@@ -201,7 +201,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd1',
+        imageId: 'bg1',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -209,7 +209,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd2',
+        imageId: 'bg2',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -217,7 +217,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd3',
+        imageId: 'bg3',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -225,7 +225,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd4',
+        imageId: 'bg4',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -233,7 +233,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd5',
+        imageId: 'bg5',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -241,7 +241,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd6',
+        imageId: 'bg6',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -249,7 +249,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd7',
+        imageId: 'bg7',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -257,7 +257,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd8',
+        imageId: 'bg8',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -265,7 +265,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd9',
+        imageId: 'bg9',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -273,7 +273,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd10',
+        imageId: 'bg10',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -281,7 +281,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd11',
+        imageId: 'bg11',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'
@@ -289,7 +289,7 @@ const COMMENTS =[
     },
     {
         categoryId: 3,
-        imageId: 'bd12',
+        imageId: 'bg12',
         comment: 'Nice! Background Picture',
         author: 'Al Amin Ovi',
         date: '2024-03-19T22:43:30.584738Z'

@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import './ImageDetail.css'
 import Like from '../../../../../assets/images/proflie pic/like.png'
 import Unike from '../../../../../assets/images/proflie pic/unlike.png'
-import Profile from '../../../../../assets/images/proflie pic/profile.png'
 import Send from '../../../../../assets/comment/sendBtn.png'
 import Sent from '../../../../../assets/comment/sentbtn.png'
+import LoadComments from './LoadComments'
 
 const ImageDetail = ({image, comment}) => {
+    // console.log('ImageLoader', image)
+    // console.log("Background Comment check ID", comment)
     const [toggleLike, setToggleLike] = useState(false);
     const [toggleHover, setToggleHover] = useState(false);
     const toggleLikeHandler = () => {
@@ -17,7 +19,10 @@ const ImageDetail = ({image, comment}) => {
     }
     const sendBtn = toggleHover === false? Send:Sent;
     const liked = toggleLike === true ? Like:Unike;
-  return (
+    const seletedComment = comment.filter((comment)=> comment.imageId === image.id);
+    // console.log("Background image.id check ID", seletedComment.imageId)
+    console.log("Background Comment check ID", seletedComment)
+    return (
     <div>
         <div className='ImageDetailModal'>
             <img className='MainImage' src={image.image} alt="image" />
@@ -32,8 +37,8 @@ const ImageDetail = ({image, comment}) => {
                 </div>
                 <hr />
                 <div>
-                    <div className='showComments'>
-                        <div>
+                    <div className=''>
+                        {/* <div>
                             <img style={{width:'50px', marginLeft:'1rem',marginTop:'1rem'}} src={Profile} alt="profile" />
                         </div>
                         <div>
@@ -43,7 +48,8 @@ const ImageDetail = ({image, comment}) => {
                             <p style={{marginLeft:'.5rem'}}>{comment.map((comment) => {
                                 return (comment.imageId===image.id && comment.comment);
                             })}</p>
-                        </div>
+                        </div> */}
+                        <LoadComments comments={seletedComment}/>
                     </div>
                         <hr />
                         <div>

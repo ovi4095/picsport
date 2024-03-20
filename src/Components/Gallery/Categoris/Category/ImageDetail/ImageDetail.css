@@ -4,7 +4,7 @@
 }
 .ImageDetailModal{
     flex-direction: column;
-    
+    /* align-items: flex-start; */
 }
 .MainImage{
     width: 22.5rem;
@@ -23,6 +23,7 @@
     background: #E5E1E1;
     padding: .5rem;
     border-radius: 1.5rem;
+    padding-bottom: 1rem;
     
 }
 .commnetBox{

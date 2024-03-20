@@ -6,7 +6,7 @@ import CrossBlack from '../../../../assets/comment/crossBlack.png'
 import CrossRed from '../../../../assets/comment/crossRed.png'
 
 const Background = ({comments, images, category}) => {
-
+    // console.log("Background Comment check BG", comments)
     const [selectedImage, setSelectedImage] = useState(null);
     const [comment] = useState(comments);
     const [toggleModal, setToggleModal] = useState(false);
