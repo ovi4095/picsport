@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Header from './Header/Header'
-import Gallery from './Gallery/Gallery'
 import Footer from './Footer/Footer'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './Home/Home'
@@ -9,7 +8,6 @@ import Auth from './Auth/Auth'
 import CATEGORIES from '../data/categoris'
 import CATEGORYGALLERY from '../data/catagoryGallery'
 import IMAGES from '../data/categoryImage'
-import './Gallery/Gallery.css'
 import Animal from './Gallery/Categoris/Category/Animale'
 import COMMENTS from '../data/imageComments'
 import Anime from './Gallery/Categoris/Category/Anime'
@@ -17,6 +15,7 @@ import Background from './Gallery/Categoris/Category/Background'
 import Landscape from './Gallery/Categoris/Category/Landscape'
 import People from './Gallery/Categoris/Category/People'
 import Space from './Gallery/Categoris/Category/Space'
+import GalleryHolder from './Gallery/GalleryHolder'
 // import Categoris from './Gallery/Categoris/Categoris'
 
 export class Main extends Component {
@@ -29,7 +28,7 @@ export class Main extends Component {
 
   render() {
     const gallery = this.state.categories.map((category) => {
-             return (<Gallery category={category} key={category.id}/>)
+             return (<GalleryHolder category={category} key={category.id}/>)
         });
 
     const animal = this.state.categoryGallery.map((animal)=>{
@@ -85,7 +84,6 @@ export class Main extends Component {
     return (
         <div>
             <Header/>
-                  <div className='Main grid--x2'>
                   <Routes>
                       <Route path='/' element={<Navigate to='/home' replace={true}/>}/>
                       <Route path='/home' element={<Home/>}/>
@@ -98,8 +96,7 @@ export class Main extends Component {
                       <Route path='/category-People' element={people}/>
                       <Route path='/category-Space' element={space}/>
                       <Route path='/login' element={<Auth/>}/>
-                  </Routes>             
-                  </div>
+                  </Routes>
             <Footer/>
         </div>
       )

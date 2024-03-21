@@ -1,0 +1,41 @@
+.Gallery {
+     display: inline-flex;
+     flex: 0 0 40.333333%;
+    flex-direction: co;
+    align-items:center;
+    margin-left:  1rem; 
+    
+
+}
+
+.Main {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    padding-bottom: 5rem;
+ 
+}
+.Main{
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.grid--x4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+.grid--x3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid--x2 {
+    grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 450px){
+    .Gallery {
+        margin-left: -1rem; 
+    }
+    .Main{
+        justify-content: center;
+    }
+    
+}
